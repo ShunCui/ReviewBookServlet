@@ -13,8 +13,8 @@
 	<form action="SubmitServlet" method="post">
 		<label for="subtitle">サブタイトル</label><br>
 		<input type="text" id="subtitle" name="subtitle" size="80" placeholder="EX)感動したシーンについて"></textarea><br><br>
-		<label for="comment">感想：</label><br>
-		<textarea name="comment" rows="10" cols="80" placeholder="ここに本文を書いてください"></textarea><br><br>
+		<label for="review">感想：</label><br>
+		<textarea name="review" rows="10" cols="80" placeholder="ここに本文を書いてください"></textarea><br><br>
 		<input type="submit" value="投稿">
 	</form>
 </body>

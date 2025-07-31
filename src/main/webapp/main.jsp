@@ -47,17 +47,19 @@
 
 <section>
   <h3>カテゴリから探す</h3>
-  <a href="bookSearchServlet?category=IT">IT</a> / <a href="BookSearchServlet?category=SF">SF</a> / <a href="BookSearchServlet?category=文学">文学</a>　/ <a href="BookSearchServlet?category=ミステリー">ミステリー</a>
+  <a href="BookSearchServlet?category=IT">IT</a> / <a href="BookSearchServlet?category=SF">SF</a> / <a href="BookSearchServlet?category=文学">文学</a>　/ <a href="BookSearchServlet?category=ミステリー">ミステリー</a>
 </section>
 
 <section>
   <h3>新着書評</h3>
+  <img src="images/book1.jpg" alt="書籍1">
+  <p>書籍１ITのカテゴリ</p>
+  <img src="images/book2.jpg" alt="書籍2">
+  <p>書籍２SFのカテゴリ</p>
+  <img src="images/book3.jpg" alt="書籍3">
+  <p>書籍３文学のカテゴリ</p>
   <img src="images/book4.jpg" alt="書籍４">
-  <p>「javaの本」を読んで、非常にわかりやすかったです！</p>
-  <img src="images/book5.jpg" alt="書籍５">
-  <p>「未来の都市」を読んで感動しました！</p>
-  <img src="images/book6.jpg" alt="書籍６">
-  <p>「罪と罰」ドストエフスキー</p>
+  <p>書籍４ミステリーのカテゴリ</p>
 </section>
 
 </body>

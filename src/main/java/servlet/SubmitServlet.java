@@ -29,7 +29,7 @@ public class SubmitServlet extends HttpServlet {
 		request.setAttribute("comment", comment);
 		request.setAttribute("subtitle", subtitle);
 		
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/thankYou.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/categoryResult.jsp");
 		dispatcher.forward(request, response);
 	}
 	

@@ -16,34 +16,30 @@
 	</header>
 	
 	<section>
-		<h2>
-		<% String category = (String) request.getAttribute("category"); %>
-		<%=category %> カテゴリの書籍一覧		
-		</h2>
-		
-		<%
+		<% 
+		String category = (String) request.getAttribute("category");
 		List<Book> books = (List<Book>) request.getAttribute("books");
-		
-		if (books != null && !books.isEmpty()) {
 		%>
-		
-			<ul>
-				<%　for (Book book : books) {%>
-					<li style="margin-bottom: 20px;">
-					 <img src="<%= book.getImagePath() %>" alt="<%= book.getTitle() %>" width="150"><br>
-					 <strong><%= book.getTitle() %></strong><br>		
-					 カテゴリ：<%= book.getcategory() %>
-				 	</li>			
-				<%}%>
-			</ul>
-		<%
-		} else {
-		%>
-			<p>このカテゴリには書籍が登録されていません。</p>
-		<%
-		}
-		%>
-		
+		<h2><%=category %> カテゴリの書籍一覧</h2>		
+		<ul>
+		<% if (books != null) {
+			for (Book b : books) {%>
+			<li>
+				<img src="<%= b.getImagePath() %>" width="150"><br>
+				<strong><%= b.getTitle() %></strong><br>
+				カテゴリ：<%= b.getCategory() %><br>
+				<strong>サブタイトル：</strong> <%= b.getSubtitle() %><br>
+				<strong>感想：</strong> <%= b.getReview() %><br>
+				
+				<form action="PostDetailServlet" method="get">
+					<input type="hidden" name="bookId" value="<%= b.getId() %>">
+					<input type="submit" value="詳細を見る">
+				</form>
+			</li>
+		<% }} else { %>
+			<li>書籍がありません</li>
+		<%} %>
+		</ul>
 	</section>
 </body>
 </html>

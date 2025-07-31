@@ -23,7 +23,8 @@ public class PostDetailServlet extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 		String bookId = request.getParameter("bookId");
 		String forwardPath = "";
-
+//		System.out.println("== DEBUG ==");
+//		System.out.println("book id is:" + bookId);
 		switch (bookId) {
 			case "1":
 				forwardPath = "/WEB-INF/jsp/postDetail1.jsp";
@@ -40,6 +41,7 @@ public class PostDetailServlet extends HttpServlet {
 			default:
 				forwardPath = "/WEB-INF/jsp/error.jsp";
 		}
+		System.out.println("response: " + forwardPath);
 		RequestDispatcher dispatcher = request.getRequestDispatcher(forwardPath);
 		dispatcher.forward(request, response);
 	}
